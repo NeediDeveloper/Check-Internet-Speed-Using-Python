@@ -1,16 +1,10 @@
-import sys
-import os
-if getattr(sys, 'frozen', False):
-    sys.stdout = open(os.devnull, 'w')  
-    sys.stderr = open('error.log', 'w')
-
 import tkinter as tk
 import speedtest #pip install speedtest-cli
 
 def CheckSpeed():
     st = speedtest.Speedtest()
     # if the code is not working then uncomment the following line of code
-    st.get_best_server()
+    #st.get_best_server()
     CheckButton.config(image=StartImg)
     
     UploadingLabel.config(text="Testing Upload Speed...", fg="#f07007")
